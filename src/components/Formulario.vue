@@ -5,10 +5,7 @@
 
     <input type="text" class="formulario-input" v-model="inputValue">
 
-    <button 
-      :disable="disabled"
-      v-on:click="onSubmit"   
-    >{{ button }}</button>
+    <button :disabled="!inputValue" v-on:click="onSubmit">{{ button }}</button>
 
   </div>
 </template>
@@ -25,7 +22,7 @@
 
     data(){
       return {
-        inputValue:""
+        inputValue:''
       }
     },
     
